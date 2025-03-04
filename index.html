@@ -5,80 +5,83 @@ SA：I [Pham Ha Minh Tri], [400381477] certify that this material is my original
 No other person's work has been used without due acknowledgement.
 I have also not made my work available to anyone else.
 -->
-  <head>
-    <title> [Tri Pham] [Lab #1]</title>
+<head>
+  <title>[Tri Pham] [assignment1]</title>
+  <link rel="stylesheet" href="assignment1_css.css">
+</head>
 
-    <style>
-      h1, h2{
-        font-family:'Times New Roman', Times, serif;
-      }
+<body>
+  <h1>
+    <img src="Tri.jpeg" width="200" height="180">&emsp;<i>Tri Pham</i>
+  </h1>
 
-      body{
-        font-family: Arial, Helvetica, sans-serif;
-      }
+  <nav>
+    <a onclick="showSection('about')">About Me</a> | 
+    <a onclick="showSection('education')">Education</a> | 
+    <a onclick="showSection('work')">Work</a> | 
+    <a onclick="showSection('hobbies')">Hobbies</a>
+  </nav>
 
-      pre{text-align: center;}
-    </style>
-  </head>
+  <div id="about" class="section active">
+    <h2>About Me</h2>
+    <p>Welcome to my personal page! I'm Tri Pham, a student passionate about technology, software development, and innovation.</p>
+  </div>
 
-
-  <body>
-    <h1>
-      <img src="mcmaster.png"
-      width = "100"
-      length = "100">&emsp;<i>Tri Pham</i>
-    </h1>
-    
+  <div id="education" class="section">
     <h2>Education</h2>
+    <ul>
+      <li>Columbia International College (CIC).</li>
+      <li>McMaster University - BTech Automation (Smart Systems Stream).</li>
+    </ul>
+  </div>
+
+  <div id="work" class="section">
+    <h2>Work Experience</h2>
+    <b><i>Software Developer</i></b> - 4-month co-op at <a href="https://www.brocksolutions.com/careers-page/">Brock Solutions</a>
       <ul>
-        <li>Columbia International College (CIC).</li>
-        <li>Mcmaster University - BTech Automation (Samrt systems stream).</li>
+        <li>Designing, developing, and maintaining multiple applications and services.</li>
+        <li>Performing other duties as assigned by your Project Manager.</li>
+        <li>Detecting, reporting, investigating, and fixing defects.</li>
       </ul>
-      
-    <h2>Work</h2>
 
-    <b><i>Software developer</i></b> - 4-month co-op at <a href="https://www.brocksolutions.com/careers-page/">Brock Solutions</a>
-    <ul>
-      <li>Designing, developing and maintaining multiple applications and services.</li>
-      <li>Performing other duties as assigned by your Project Manager.</li>
-      <li>Detecting, reporting, investigating, and fixing defects.</li>
-    </ul>
+    <b><i>Server</i></b> - Part-time job at <a href="http://www.saigonhouse.ca">SaiGon House Restaurant</a>
+      <ul>
+        <li>Set tables throughout the shift.</li>
+        <li>Clean tables and prepare spaces for future diners.</li>
+        <li>Ensure food and beverages are delivered in a timely fashion.</li>
+      </ul>
 
-    <b><i>Server</i></b> - Part time job at <a href="http://www.saigonhouse.ca">SaiGon House Restaurant</a>
-    <ul>
-      <li>Set tables throughout the shift.</li>
-      <li>Clean tables and prepare spaces for future diners.</li>
-      <li>Ensure food and beverages are delivered in a timely fashion.</li>
-    </ul>
+    <b><i>Tech Crew</i></b> - Volunteer at <a href="https://citykidz.ca/volunteer/">CityKidz</a>
+      <ul>
+        <li>Operate Tech Team equipment during CityKidz Saturday studio shows.</li>
+        <li>Coordinate with Tech Team members and show leadership to execute cues and transitions effectively.</li>
+        <li>Climb the Tech booth ladder in the CityKidz theatre to access equipment and control panels.</li>
+      </ul>
+  </div>
 
-    <b><i>Tech Crew</i></b> - Volunteer at <a href="https://citykidz.ca/volunteer/">CityKidz</a> 
-    <ul>
-      <li>Ability to operate Tech Team equipment during CityKidz Saturday studio shows, ensuring smooth execution and creating an engaging atmosphere for the audience.</li>
-      <li>Ability to work well in cooperation with fellow Tech Team members, cast members, and show leadership to coordinate cues and transitions effectively.</li>
-      <li>Climbing the Tech booth ladder in the CityKidz theatre to access equipment and control panels.</li>
-    </ul>
-
-
-    <h2>Hobbies</h2>
-    <ol>
-      <li>
-        <b>Hobbies: </b>Passionate about Muay Thai training, focusing on discipline and physical fitness, and enjoy playing pool as a way to relax and sharpen strategic thinking.
-      </li>
-      <li>
-        <b>Interests: </b>Enthusiastic about traveling to explore diverse cultures, avid reader with a love for personal growth and fiction, and enjoy designing innovative 3D printing projects to bring creative ideas to life.
-      </li>
-      <li>
-        <b>Professional Associations: </b>Member of the International Innovation and Design Association (IIDA), fostering connections and insights in cutting-edge technology and creative design.
-      </li>
-      <li>
-        <b>Clubs: </b>Active member of the McMaster Basketball Club, participating in regular games and fostering teamwork within the university community.
-      </li>
-    </ol>
-
-  </body>
+  <div id="hobbies" class="section">
+    <h2>Hobbies & Interests</h2>
+      <ol>
+        <li><b>Hobbies: </b>Passionate about Muay Thai training, focusing on discipline and physical fitness, and enjoy playing pool as a way to relax and sharpen strategic thinking.</li>
+        <li><b>Interests: </b>Enthusiastic about traveling to explore diverse cultures, avid reader with a love for personal growth and fiction, and enjoy designing innovative 3D printing projects to bring creative ideas to life.</li>
+        <li><b>Professional Associations: </b>Member of the International Innovation and Design Association (IIDA), fostering connections and insights in cutting-edge technology and creative design.</li>
+        <li><b>Clubs: </b>Active member of the McMaster Basketball Club, participating in regular games and fostering teamwork within the university community.</li>
+      </ol>
+  </div>
 
   <footer>
-    <p><pre>&copy;Tri Pham</pre></p>
+    <p><pre>&copy; Tri Pham</pre></p>
   </footer>
+
+  <script>
+    function showSection(sectionId) {
+      let sections = document.querySelectorAll('.section');
+      ections.forEach(section => section.classList.remove('active'));
+      document.getElementById(sectionId).classList.add('active');
+    }
+  </script>
+
+</body>
 </html>
+
 
